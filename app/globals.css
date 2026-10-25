@@ -1,0 +1,550 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --font-hand: var(--font-hand);
+  --font-mono: var(--font-mono-lab);
+
+  /* Palette « cahier de labo » */
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-lab-blue: var(--lab-blue);
+  --color-lab-lime: var(--lab-lime);
+  --color-lab-yellow: var(--lab-yellow);
+  --color-lab-green: var(--lab-green);
+  --color-lab-green-deep: var(--lab-green-deep);
+  --color-pole-violet: var(--pole-violet);
+  --color-pole-orange: var(--pole-orange);
+  --color-pole-rose: var(--pole-rose);
+  --color-pole-jaune: var(--pole-jaune);
+  --color-pole-vert: var(--pole-vert);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --paper: #f7f2e6;
+  --paper-deep: #efe7d4;
+  --ink: #161616;
+  --ink-soft: #4a4740;
+  --lab-blue: #1b3cc4;
+  --lab-lime: #c8f56a;
+  --lab-yellow: #ffd94a;
+  --lab-green: #3fae5a;
+  --lab-green-deep: #14532d;
+  --pole-violet: #cfcdfa;
+  --pole-orange: #fbb24d;
+  --pole-rose: #f7a8d8;
+  --pole-jaune: #fde26a;
+  --pole-vert: #dcf8bb;
+  --grid-line: rgb(31 69 214 / 0.07);
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: #fffdf7;
+  --card-foreground: var(--ink);
+  --popover: #fffdf7;
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: #fffdf7;
+  --secondary: var(--paper-deep);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-deep);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--lab-lime);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgb(22 22 22 / 0.14);
+  --input: rgb(22 22 22 / 0.2);
+  --ring: var(--lab-blue);
+  --radius: 0.875rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: var(--paper);
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  :focus-visible {
+    outline: 3px solid var(--lab-blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: var(--lab-lime);
+    color: var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  /* Titre façon affiche : noir, épais, condensé */
+  .titre-affiche {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    line-height: 0.92;
+    color: var(--ink);
+  }
+
+  /* Surlignage fluo, légèrement décalé comme au feutre */
+  .surligne {
+    background-image: linear-gradient(
+      100deg,
+      transparent 0.2em,
+      var(--lab-lime) 0.2em,
+      var(--lab-lime) calc(100% - 0.25em),
+      transparent calc(100% - 0.25em)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.5em;
+    background-position: 0 88%;
+    padding-inline: 0.08em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+  .surligne-jaune {
+    background-image: linear-gradient(100deg, transparent 0.2em, var(--lab-yellow) 0.2em, var(--lab-yellow) calc(100% - 0.25em), transparent calc(100% - 0.25em));
+  }
+
+  /* Cadre bleu des affiches */
+  .cadre-bleu {
+    border: 2px solid var(--lab-blue);
+    border-radius: 4px;
+  }
+
+  /* Étiquette de carnet */
+  .etiquette {
+    font-family: var(--font-mono-lab);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Ruban adhésif */
+  .scotch {
+    position: absolute;
+    width: 6.5rem;
+    height: 1.6rem;
+    background: rgb(255 248 220 / 0.75);
+    border: 1px solid rgb(22 22 22 / 0.06);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.06);
+    backdrop-filter: blur(1px);
+  }
+
+  .carte {
+    background: #fffdf7;
+    border: 1.5px solid var(--ink);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 0 0 var(--ink);
+  }
+
+  .bouton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.875rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      background-color 0.15s ease;
+  }
+  .bouton:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 0 0 var(--ink);
+  }
+  .bouton-noir {
+    background: var(--ink);
+    color: #fffdf7;
+  }
+  .bouton-noir:hover {
+    box-shadow: 3px 3px 0 0 var(--lab-blue);
+  }
+  .bouton-fluo {
+    background: var(--lab-lime);
+    color: var(--ink);
+  }
+  .bouton-clair {
+    background: #fffdf7;
+    color: var(--ink);
+  }
+
+  .lien-bleu {
+    color: var(--lab-blue);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  .lien-bleu:hover {
+    text-decoration-style: wavy;
+  }
+
+  .fond-violet { background-color: var(--pole-violet); }
+  .fond-orange { background-color: var(--pole-orange); }
+  .fond-rose { background-color: var(--pole-rose); }
+  .fond-jaune { background-color: var(--pole-jaune); }
+  .fond-vert { background-color: var(--pole-vert); }
+}
+
+@keyframes trace {
+  from {
+    stroke-dashoffset: var(--longueur, 600);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.trait-anime {
+  stroke-dasharray: var(--longueur, 600);
+  stroke-dashoffset: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .trait-anime {
+    animation: trace 1.4s ease-out 0.4s both;
+  }
+}
+
+@keyframes flotte {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-6px) rotate(var(--r, 0deg)); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .flotte {
+    animation: flotte 6s ease-in-out infinite;
+  }
+}
+
+/* ScrollGlobe : étiquette de section qui apparaît puis s'efface */
+@keyframes fadeOutLabel {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0.5rem) scale(0.95);
+  }
+}
+.animate-fadeOut {
+  animation: fadeOutLabel 2.5s ease forwards;
+}
+.group:hover .animate-fadeOut {
+  animation: none;
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------ *
+ * Lueur « spotlight » sur tous les boutons (d'après components/ui/spotlight-card.tsx).
+ * SpotlightPointer pose --gx/--gy (position du pointeur relative au bouton) sur les
+ * boutons proches, et --xp (0 à 1) sur <html> pour faire varier la teinte (verts du site).
+ * ::before = anneau lumineux sur la bordure ; ::after = halo flou autour.
+ * ------------------------------------------------------------------ */
+.bouton,
+.glow {
+  --glow-border: 3px;
+  --glow-size: 170px;
+  --glow-hue: calc(80 + (var(--xp, 0.5) * 70));
+  position: relative;
+  isolation: isolate;
+}
+.bouton::before,
+.bouton::after,
+.glow::before,
+.glow::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: calc(var(--glow-border) * -1);
+  border: var(--glow-border) solid transparent;
+  border-radius: inherit;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0) border-box;
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0) border-box;
+  mask-composite: exclude;
+}
+/* Anneau : couleur vive + cœur blanc, centré sur le pointeur */
+.bouton::before,
+.glow::before {
+  /* Le pseudo-élément démarre au bord extérieur du bouton : même origine que --gx/--gy */
+  --cx: var(--gx, -9999px);
+  --cy: var(--gy, -9999px);
+  background-image:
+    radial-gradient(
+      calc(var(--glow-size) * 0.35) calc(var(--glow-size) * 0.35) at var(--cx) var(--cy),
+      hsl(0 0% 100% / 0.95),
+      transparent 100%
+    ),
+    radial-gradient(
+      calc(var(--glow-size) * 0.75) calc(var(--glow-size) * 0.75) at var(--cx) var(--cy),
+      hsl(var(--glow-hue) 95% 50% / 1),
+      transparent 100%
+    );
+  z-index: 1;
+}
+/* Halo diffus autour du bouton */
+.bouton::after,
+.glow::after {
+  inset: -12px;
+  border-width: 12px;
+  filter: blur(9px);
+  opacity: 1;
+  background-image: radial-gradient(
+    calc(var(--glow-size) * 0.6) calc(var(--glow-size) * 0.6) at calc(var(--gx, -9999px) + 10px) calc(var(--gy, -9999px) + 10px),
+    hsl(var(--glow-hue) 100% 50% / 1),
+    transparent 100%
+  );
+  z-index: -1;
+}
+/* Écrans tactiles sans survol : pas de lueur */
+@media (hover: none) {
+  .bouton::before,
+  .bouton::after,
+  .glow::before,
+  .glow::after {
+    display: none;
+  }
+}
+
+/* Marquee (components/ui/marquee.tsx) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+/* Hero : forme de membrane souple qui ondule (contour + image) */
+.membrane {
+  border-radius: 2.5rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .membrane {
+    animation: membrane 18s ease-in-out infinite alternate;
+  }
+  .membrane-contour {
+    animation-duration: 22s;
+    animation-direction: alternate-reverse;
+  }
+}
+@keyframes membrane {
+  0% {
+    border-radius: 2.5rem 4.5rem 3rem 5rem / 4rem 3rem 5rem 3.5rem;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  33% {
+    border-radius: 5rem 3rem 4.5rem 2.5rem / 3rem 5rem 3.5rem 4.5rem;
+    transform: translateY(-6px) rotate(-0.4deg) scale(1.006);
+  }
+  66% {
+    border-radius: 3.5rem 5rem 2.5rem 4.5rem / 5rem 3.5rem 4rem 3rem;
+    transform: translateY(4px) rotate(0.3deg) scale(0.997);
+  }
+  100% {
+    border-radius: 4.5rem 2.5rem 5rem 3rem / 3.5rem 4.5rem 3rem 5rem;
+    transform: translateY(-3px) rotate(-0.2deg) scale(1.004);
+  }
+}
+
+/* InkHero : lente respiration organique de l'image (membrane souple) */
+@media (prefers-reduced-motion: no-preference) {
+  .ink-respire {
+    animation: ink-respire 16s ease-in-out infinite alternate;
+    transform-origin: 50% 60%;
+  }
+}
+@keyframes ink-respire {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.018) translate(-0.4%, -0.3%);
+  }
+  100% {
+    transform: scale(1.01) translate(0.3%, 0.2%);
+  }
+}
+
+/* Globe de contact : pulsation du marqueur */
+@media (prefers-reduced-motion: no-preference) {
+  .globe-marker-pulse {
+    animation: globe-pulse 2.2s ease-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+}
+@keyframes globe-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Pied de page « cahier » (BeamWordmarkFooter + .bwf-cahier) :
+ * même fond beige et même quadrillage que le site, sans faisceau ni lueurs vertes.
+ * ------------------------------------------------------------------ */
+.bwf.bwf-cahier {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+  /* reflet discret dans les lettres : beige plus soutenu au lieu du vert */
+  --bwf-lit: 168, 150, 112 !important;
+}
+.bwf-cahier .bwf-sky {
+  display: none;
+}
+/* filet supérieur identique aux bordures des autres sections */
+.bwf-cahier .bwf-rule {
+  height: 1.5px;
+  background: var(--ink);
+}
+.bwf-cahier .bwf-label {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.bwf-cahier .bwf-link {
+  color: var(--ink-soft);
+}
+.bwf-cahier .bwf-link:hover,
+.bwf-cahier .bwf-link:focus-visible,
+.bwf-cahier .bwf-credits a:hover,
+.bwf-cahier .bwf-credits a:focus-visible {
+  color: var(--ink);
+}
+/* infobulles des réseaux : fond vert fluo, texte noir lisible */
+.bwf-cahier .bwf-tip {
+  color: var(--ink);
+}
+.bwf-cahier .bwf-soc {
+  color: var(--ink);
+  box-shadow:
+    inset 0 0 0 1.5px rgb(22 22 22 / 0.35),
+    0 6px 14px -10px rgb(0 0 0 / 0.4);
+}
+.bwf-cahier .bwf-soc:hover,
+.bwf-cahier .bwf-soc:focus-visible {
+  color: var(--ink);
+  background: var(--lab-lime);
+  box-shadow:
+    inset 0 0 0 1.5px var(--ink),
+    3px 3px 0 0 var(--ink);
+}
+
+/* ------------------------------------------------------------------ *
+ * Inscriptions Bio-Innov 2027 (« Les inscriptions ouvrent bientôt ! ») :
+ * bulles qui montent d'une fiole et surlignage qui se dessine en boucle.
+ * Rien ne bouge si l'utilisateur demande moins d'animations.
+ * ------------------------------------------------------------------ */
+@keyframes bulle-monte {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-4.5rem) scale(1.1); opacity: 0; }
+}
+.bulle {
+  animation: bulle-monte 2.7s ease-in infinite;
+}
+@keyframes surligne-dessine {
+  0%, 15% { background-size: 0% 0.5em; }
+  45%, 85% { background-size: 100% 0.5em; }
+  100% { background-size: 100% 0.5em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .surligne-anime {
+    animation: surligne-dessine 4s ease-in-out infinite alternate;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bulle { animation: none; }
+}
