@@ -80,12 +80,8 @@ export default function MentionsLegales() {
         <Section numero={2} titre="Hébergement du site">
           <p>Le site internet est hébergé par :</p>
           <ul className="list-disc space-y-1.5 pl-5">
-            <li>
-              Nom de l’hébergeur : <ACompleter />
-            </li>
-            <li>
-              Adresse : <ACompleter />
-            </li>
+            <li>Nom de l’hébergeur : Vercel Inc.</li>
+            <li>Adresse : 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis</li>
             <li>
               Téléphone : <ACompleter />
             </li>

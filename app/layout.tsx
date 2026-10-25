@@ -15,6 +15,8 @@ const mono = Space_Mono({ variable: "--font-mono-lab", subsets: ["latin"], weigh
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  // Avant le lancement officiel : pas d'indexation (voir site.ouvertAuxMoteursDeRecherche).
+  ...(site.ouvertAuxMoteursDeRecherche ? {} : { robots: { index: false, follow: false } }),
   title: {
     default: "Biotrace Montpellier — Association étudiante du Master IBION-Tec",
     template: "%s · Biotrace Montpellier",

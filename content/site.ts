@@ -7,6 +7,12 @@ export const site = {
   nomCourt: "Biotrace",
   // Adresse publique du site : définir NEXT_PUBLIC_SITE_URL lors de la mise en ligne.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  /**
+   * Interrupteur de lancement : tant qu'il vaut false, le site demande à Google et aux autres
+   * moteurs de recherche de ne pas l'indexer (robots.txt + balise noindex), même s'il est déjà
+   * en ligne pour un test. Le passer à true le jour de l'ouverture officielle.
+   */
+  ouvertAuxMoteursDeRecherche: false as boolean,
   statut: "Association loi 1901",
   creation: "novembre 2005",
   formation: "Master IBION-Tec — Ingénierie Biomoléculaire & Nanobiotechnologies",
