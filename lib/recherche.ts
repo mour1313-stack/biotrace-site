@@ -34,10 +34,10 @@ const index: ResultatRecherche[] = [
   })),
   {
     titre: "Les biomatériaux en images",
-    extrait: "Le thème de Bio-Innov 2027 présenté en images.",
+    extrait: "Le thème de Bio-Innov 2027, les biomatériaux biosourcés, présenté en images.",
     href: "/biomateriaux",
     type: "Page",
-    motsCles: "biomateriaux theme globe",
+    motsCles: "biomateriaux biosources theme planete",
   },
   {
     titre: "Mentions légales",

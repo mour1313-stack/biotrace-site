@@ -12,7 +12,7 @@ export function MissionsBento() {
     ...missions.map((m) => ({ title: m.titre, description: m.texte, icon: icones[m.icone] })),
     {
       title: congres.nom,
-      description: `Le congrès du Master IBION-Tec sur les biomatériaux, les ${congres.dates}. Biotrace aide à le financer.`,
+      description: `Le congrès du Master IBION-Tec sur les biomatériaux biosourcés, les ${congres.dates}. Biotrace aide à le financer.`,
       icon: <FlaskConical />,
       href: "/bio-innov-2027",
     },

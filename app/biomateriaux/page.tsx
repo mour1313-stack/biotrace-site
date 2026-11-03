@@ -1,23 +1,22 @@
 import type { Metadata } from "next"
-import Globe from "@/components/ui/globe"
-import { BiomaterialTexture } from "@/components/ui/biomaterial-texture"
+import { Planete } from "@/components/ui/planete"
 import { ScrollGlobe, type ScrollGlobeSection } from "@/components/ui/landing-page"
 import { congres } from "@/content/congres"
 import { site } from "@/content/site"
 
 export const metadata: Metadata = {
-  title: "Biomatériaux — le thème de Bio-Innov 2027",
+  title: "Biomatériaux biosourcés — le thème de Bio-Innov 2027",
   description:
-    "De la conception à l’application : découvrez en images le parcours d’un biomatériau, thème du congrès Bio-Innov 2027 organisé par les étudiants du Master IBION-Tec à Montpellier.",
+    "De la ressource naturelle à l’application : découvrez en images le parcours d’un biomatériau biosourcé, thème du congrès Bio-Innov 2027 organisé par les étudiants du Master IBION-Tec à Montpellier.",
 }
 
 const sections: ScrollGlobeSection[] = [
   {
     id: "theme",
     badge: "Le thème",
-    title: "Biomatériaux",
-    subtitle: "De la conception à l’application",
-    description: `Thème de ${congres.nom}, le congrès scientifique organisé par les étudiants du Master IBION-Tec. Suivez le parcours d’un biomatériau, de la molécule jusqu’au contact du vivant.`,
+    title: "Biosourcés",
+    subtitle: "Des biomatériaux nés du vivant",
+    description: `Thème de ${congres.nom}, le congrès scientifique organisé par les étudiants du Master IBION-Tec. Suivez le parcours d’un biomatériau biosourcé, de la ressource naturelle jusqu’au contact du vivant.`,
     align: "left",
     actions: [
       { label: "Commencer la visite", variant: "primary", href: "#conception" },
@@ -26,11 +25,11 @@ const sections: ScrollGlobeSection[] = [
   },
   {
     id: "conception",
-    badge: "Conception",
-    title: "Imaginer",
-    subtitle: "à l’échelle moléculaire",
+    badge: "Ressource",
+    title: "Puiser",
+    subtitle: "dans la biomasse",
     description:
-      "Tout commence par le choix des briques : polymères naturels ou synthétiques, céramiques, hydrogels… Leur structure chimique détermine la façon dont le matériau sera toléré par l’organisme, sa résistance ou encore sa vitesse de dégradation.",
+      "Tout commence par une ressource renouvelable : cellulose des plantes, chitosane des carapaces de crustacés, alginate des algues, collagène, soie ou amidon. Leur structure moléculaire détermine la façon dont le matériau sera toléré par l’organisme, sa résistance et sa vitesse de dégradation.",
     align: "left",
     media: {
       src: "/images/biomateriaux/reseau-moleculaire.webp",
@@ -42,11 +41,11 @@ const sections: ScrollGlobeSection[] = [
   },
   {
     id: "fabrication",
-    badge: "Fabrication",
-    title: "Fabriquer",
+    badge: "Transformation",
+    title: "Façonner",
     subtitle: "couche par couche",
     description:
-      "Moulage, électrofilage, bio-impression 3D : les procédés de fabrication donnent au matériau sa forme et sa porosité. Des pores bien dimensionnés permettent aux cellules de coloniser le support et aux nutriments de circuler.",
+      "Extraction, purification, puis mise en forme : hydrogels, fibres, films ou bio-impression 3D donnent au matériau sa forme et sa porosité. Des pores bien dimensionnés permettent aux cellules de coloniser le support et aux nutriments de circuler.",
     align: "left",
     media: {
       src: "/images/biomateriaux/bio-impression.webp",
@@ -62,7 +61,7 @@ const sections: ScrollGlobeSection[] = [
     title: "Soigner",
     subtitle: "au contact du vivant",
     description:
-      "Substituts de peau, implants osseux, dispositifs qui libèrent un médicament au bon endroit : une fois évalués et validés, les biomatériaux servent à réparer ou à remplacer des tissus.",
+      "Pansements, substituts de peau, implants résorbables, dispositifs qui libèrent un médicament au bon endroit : une fois évalués et validés, les biomatériaux biosourcés réparent les tissus en s’appuyant sur des ressources renouvelables.",
     align: "left",
     media: {
       src: "/images/biomateriaux/greffe-tissu.webp",
@@ -77,7 +76,7 @@ const sections: ScrollGlobeSection[] = [
     badge: congres.nom,
     title: "Rendez-vous",
     subtitle: `les ${congres.dates}`,
-    description: `Conférences, thèse en 180 secondes et posters : venez explorer les biomatériaux à la ${congres.lieu.nom} (${congres.lieu.detail}). Programme à venir.`,
+    description: `Conférences, thèse en 180 secondes et posters : venez explorer les biomatériaux biosourcés à la ${congres.lieu.nom} (${congres.lieu.detail}). Programme à venir.`,
     align: "center",
     actions: [
       { label: "Le congrès", variant: "primary", href: "/bio-innov-2027" },
@@ -86,20 +85,14 @@ const sections: ScrollGlobeSection[] = [
   },
 ]
 
-// Sphère « biomatériau » : texture poreuse du site projetée sur une boule.
-const sphere = (
-  <Globe
-    shadow="0 28px 60px rgba(20,83,45,0.22), inset -28px -32px 55px rgba(22,22,22,0.30), inset 20px 16px 32px rgba(255,255,255,0.55)"
-  >
-    <BiomaterialTexture sphere speed={0.8} />
-  </Globe>
-)
+// Planète : les ressources biosourcées viennent du vivant et de la Terre.
+const planete = <Planete size={340} />
 
 export default function Biomateriaux() {
   return (
     <ScrollGlobe
       sections={sections}
-      globe={sphere}
+      globe={planete}
       globeConfig={{
         positions: [
           { top: "50%", left: "76%", scale: 1.35 },

@@ -17,7 +17,7 @@ export type Partenaire = {
 export const congres = {
   nom: "Bio-Innov 2027",
   edition: "21e édition",
-  theme: "Biomatériaux",
+  theme: "Biomatériaux biosourcés",
   sousTitre: "De la conception à l’application",
   dates: "1er et 2 février 2027",
   datesCourtes: { debut: "2027-02-01", fin: "2027-02-02" },
@@ -41,7 +41,7 @@ export const congres = {
   },
   /** Formats annoncés sur l'affiche officielle. */
   formats: [
-    { titre: "Conférences", texte: "Des interventions autour des biomatériaux." },
+    { titre: "Conférences", texte: "Des interventions autour des biomatériaux biosourcés." },
     { titre: "Thèse en 180 secondes", texte: "Des travaux de recherche présentés en trois minutes chrono." },
     { titre: "Posters", texte: "Une session de présentation de posters scientifiques." },
   ],

@@ -42,3 +42,7 @@ next-env.d.ts
 
 # réglages locaux de Claude
 /.claude/
+
+# dossiers techniques exclus d’iCloud
+*.nosync
+/.next

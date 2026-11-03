@@ -47,7 +47,7 @@ const etapes: JourneyItem[] = [
     id: "c2027",
     year: "2027",
     month: "février",
-    content: "Bio-Innov 2027, 21e édition, organisée par le Master IBION-Tec : les biomatériaux.",
+    content: "Bio-Innov 2027, 21e édition, organisée par le Master IBION-Tec : les biomatériaux biosourcés.",
   },
 ]
 
