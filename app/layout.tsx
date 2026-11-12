@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "Université de Montpellier",
     "Bio-Innov 2027",
     "congrès biomatériaux",
-    "biomatériaux innovants",
+    "matériaux innovants",
   ],
   openGraph: {
     type: "website",

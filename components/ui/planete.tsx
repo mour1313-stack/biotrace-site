@@ -8,7 +8,7 @@ import worldAtlas from "world-atlas/countries-110m.json"
 import { useReducedMotion } from "framer-motion"
 
 /**
- * Planète Terre qui tourne lentement (thème « biomatériaux innovants » : des matériaux
+ * Planète Terre qui tourne lentement (thème « matériaux innovants » : des matériaux
  * pensés pour le vivant et la planète). Carte locale (paquet world-atlas, aucun appel réseau),
  * océans bleu-vert, continents verts, halo d'atmosphère et ombre pour le volume.
  * Rotation coupée si l'utilisateur demande moins d'animations.

@@ -5,9 +5,9 @@ import { congres } from "@/content/congres"
 import { site } from "@/content/site"
 
 export const metadata: Metadata = {
-  title: "Biomatériaux innovants — le thème de Bio-Innov 2027",
+  title: "Matériaux innovants — le thème de Bio-Innov 2027",
   description:
-    "De la conception à l’application : découvrez en images le parcours d’un biomatériau innovant, thème du congrès Bio-Innov 2027 organisé par les étudiants du Master IBION-Tec à Montpellier.",
+    "De la conception à l’application : découvrez en images le parcours d’un matériau innovant, thème du congrès Bio-Innov 2027 organisé par les étudiants du Master IBION-Tec à Montpellier.",
 }
 
 const sections: ScrollGlobeSection[] = [
@@ -15,8 +15,8 @@ const sections: ScrollGlobeSection[] = [
     id: "theme",
     badge: "Le thème",
     title: "Innovants",
-    subtitle: "Des biomatériaux pensés pour le vivant",
-    description: `Thème de ${congres.nom}, le congrès scientifique organisé par les étudiants du Master IBION-Tec. Suivez le parcours d’un biomatériau innovant, de sa conception jusqu’au contact du vivant.`,
+    subtitle: "Des matériaux pensés pour le vivant",
+    description: `Thème de ${congres.nom}, le congrès scientifique organisé par les étudiants du Master IBION-Tec. Suivez le parcours d’un matériau innovant, de sa conception jusqu’au contact du vivant.`,
     align: "left",
     actions: [
       { label: "Commencer la visite", variant: "primary", href: "#conception" },
@@ -61,7 +61,7 @@ const sections: ScrollGlobeSection[] = [
     title: "Soigner",
     subtitle: "au contact du vivant",
     description:
-      "Pansements, substituts de peau, implants résorbables, dispositifs qui libèrent un médicament au bon endroit : une fois évalués et validés, les biomatériaux innovants réparent les tissus et soignent au plus près du vivant.",
+      "Pansements, substituts de peau, implants résorbables, dispositifs qui libèrent un médicament au bon endroit : une fois évalués et validés, les matériaux innovants réparent les tissus et soignent au plus près du vivant.",
     align: "left",
     media: {
       src: "/images/biomateriaux/applications-biosourcees.webp",
@@ -76,7 +76,7 @@ const sections: ScrollGlobeSection[] = [
     badge: congres.nom,
     title: "Rendez-vous",
     subtitle: `les ${congres.dates}`,
-    description: `Conférences, thèse en 180 secondes et posters : venez explorer les biomatériaux innovants à la ${congres.lieu.nom} (${congres.lieu.detail}). Programme à venir.`,
+    description: `Conférences, thèse en 180 secondes et posters : venez explorer les matériaux innovants à la ${congres.lieu.nom} (${congres.lieu.detail}). Programme à venir.`,
     align: "center",
     actions: [
       { label: "Le congrès", variant: "primary", href: "/bio-innov-2027" },
@@ -85,7 +85,7 @@ const sections: ScrollGlobeSection[] = [
   },
 ]
 
-// Planète : des biomatériaux pensés pour le vivant et la Terre.
+// Planète : des matériaux pensés pour le vivant et la Terre.
 const planete = <Planete size={340} />
 
 export default function Biomateriaux() {
