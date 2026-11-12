@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   // Avant le lancement officiel : pas d'indexation (voir site.ouvertAuxMoteursDeRecherche).
   ...(site.ouvertAuxMoteursDeRecherche ? {} : { robots: { index: false, follow: false } }),
   title: {
-    default: "Biotrace Montpellier — Association étudiante du Master IBION-Tec",
+    default: "Biotrace Montpellier",
     template: "%s · Biotrace Montpellier",
   },
   description:
-    "Biotrace Montpellier, association étudiante du Master IBION-Tec (Ingénierie Biomoléculaire & Nanobiotechnologies) à la Faculté des Sciences de l’Université de Montpellier, depuis 2005. Équipe, événements et congrès Bio-Innov 2027.",
+    "Depuis 2005, la science nous rassemble. Découvrez l’équipe, les événements et le congrès Bio-Innov 2027 à la Faculté des Sciences de Montpellier.",
   keywords: [
     "Biotrace",
     "Biotrace Montpellier",
