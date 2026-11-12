@@ -53,7 +53,7 @@ function TitreBiotrace() {
         <Reveal>
           <p className="etiquette inline-flex items-center gap-2 rounded-full border-[1.5px] border-ink bg-[#fffdf7]/90 px-3 py-1.5 backdrop-blur-sm">
             <span className="size-2 animate-pulse rounded-full bg-lab-green" aria-hidden />
-            Association étudiante du Master IBION-Tec
+            Association étudiante
           </p>
         </Reveal>
 
