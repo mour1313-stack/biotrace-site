@@ -6,8 +6,9 @@ import Image from "next/image"
 import { Dot } from "lucide-react"
 import { Fragment } from "react"
 import { cn } from "@/lib/utils"
+import { IconeLinkedin } from "@/components/site/icones-reseaux"
 
-export type MemberCard = { name: string; role?: string; image?: string; alt?: string }
+export type MemberCard = { name: string; role?: string; image?: string; alt?: string; linkedin?: string }
 
 export default function Members({
   title = "Members",
@@ -86,7 +87,21 @@ export default function Members({
                 />
               )}
             </div>
-            <p className={cn("mt-3 text-lg font-medium", nameClassName)}>{member.name}</p>
+            <div className="mt-3 flex items-start justify-between gap-2">
+              <p className={cn("text-lg font-medium", nameClassName)}>{member.name}</p>
+              {member.linkedin && (
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Profil LinkedIn de ${member.name} (nouvel onglet)`}
+                  title="Voir le profil LinkedIn"
+                  className="-m-1 shrink-0 rounded-md p-1 text-ink transition-colors hover:text-lab-blue focus-visible:outline-2 focus-visible:outline-lab-blue"
+                >
+                  <IconeLinkedin className="size-5" />
+                </a>
+              )}
+            </div>
             {member.role && <p className={cn("text-sm text-muted-foreground", roleClassName)}>{member.role}</p>}
           </li>
         ))}

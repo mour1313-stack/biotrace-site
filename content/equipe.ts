@@ -13,6 +13,8 @@ export type Membre = {
   fonction?: string
   /** Chemin depuis /public. Sans photo, une carte avec initiales s'affiche. */
   photo?: string
+  /** Adresse du profil LinkedIn (facultatif) : une icône cliquable s'affiche à côté du nom. */
+  linkedin?: string
 }
 
 export type Pole = {
@@ -65,10 +67,10 @@ export const promotionActuelle: Promotion = {
       motsCles: ["Collaboration", "Entraide", "Coordination", "Réactivité"],
       affiche: `${dossier}/administration-affiche.jpg`,
       membres: [
-        { nom: "Egida Saja", fonction: "Présidente", photo: `${dossier}/administration-egida-saja-hd.jpg` },
-        { nom: "Théo Morel", fonction: "Vice-président", photo: `${dossier}/administration-theo-morel-hd.jpg` },
-        { nom: "Matéo Lefebvre", fonction: "Vice-président", photo: `${dossier}/administration-mateo-lefebvre-hd.jpg` },
-        { nom: "Léa Galinier", fonction: "Secrétaire", photo: `${dossier}/administration-lea-galinier-hd.jpg` },
+        { nom: "Egida Saja", fonction: "Présidente", photo: `${dossier}/administration-egida-saja-hd.jpg`, linkedin: "https://www.linkedin.com/in/egida-saja/" },
+        { nom: "Théo Morel", fonction: "Vice-président", photo: `${dossier}/administration-theo-morel-hd.jpg`, linkedin: "https://www.linkedin.com/in/theo-morel-385a12260/" },
+        { nom: "Matéo Lefebvre", fonction: "Vice-président", photo: `${dossier}/administration-mateo-lefebvre-hd.jpg`, linkedin: "https://www.linkedin.com/in/mateo-lefebvre-84240536b/" },
+        { nom: "Léa Galinier", fonction: "Secrétaire", photo: `${dossier}/administration-lea-galinier-hd.jpg`, linkedin: "https://www.linkedin.com/in/l%C3%A9a-galinier-051294355/" },
       ],
     },
     {
@@ -80,9 +82,9 @@ export const promotionActuelle: Promotion = {
       motsCles: ["Budget", "Comptabilité", "Rigueur", "Anticipation"],
       affiche: `${dossier}/tresorerie-affiche.jpg`,
       membres: [
-        { nom: "Gatien Fosset", fonction: "Responsable", photo: `${dossier}/tresorerie-gatien-fosset-hd.jpg` },
-        { nom: "Sacha Ouakil", photo: `${dossier}/tresorerie-sacha-ouakil-hd.jpg` },
-        { nom: "Jean-Nicolas Taboada", photo: `${dossier}/tresorerie-jean-nicolas-taboada-hd.jpg` },
+        { nom: "Gatien Fosset", fonction: "Responsable", photo: `${dossier}/tresorerie-gatien-fosset-hd.jpg`, linkedin: "https://www.linkedin.com/in/gatien-fosset/" },
+        { nom: "Sacha Ouakil", photo: `${dossier}/tresorerie-sacha-ouakil-hd.jpg`, linkedin: "https://www.linkedin.com/in/sacha-ouakil-58910436b/" },
+        { nom: "Jean-Nicolas Taboada", photo: `${dossier}/tresorerie-jean-nicolas-taboada-hd.jpg`, linkedin: "https://www.linkedin.com/in/jean-nicolas-taboada-79a9ba332/" },
       ],
     },
     {
@@ -95,10 +97,10 @@ export const promotionActuelle: Promotion = {
       motsCles: ["Créativité", "Partage", "Bonne humeur"],
       affiche: `${dossier}/communication-affiche.jpg`,
       membres: [
-        { nom: "Chloé Joffreau", fonction: "Responsable", photo: `${dossier}/communication-chloe-joffreau-hd.jpg` },
-        { nom: "Coralie Houamria", photo: `${dossier}/communication-coralie-houamria-hd.jpg` },
-        { nom: "Amel Joualli", photo: `${dossier}/communication-amel-joualli-hd.jpg` },
-        { nom: "Léa Pascal", photo: `${dossier}/communication-lea-pascal-hd.jpg` },
+        { nom: "Chloé Joffreau", fonction: "Responsable", photo: `${dossier}/communication-chloe-joffreau-hd.jpg`, linkedin: "https://www.linkedin.com/in/chlo%C3%A9-joffreau-5bba90273/" },
+        { nom: "Coralie Houamria", photo: `${dossier}/communication-coralie-houamria-hd.jpg`, linkedin: "https://www.linkedin.com/in/coraliehouamria/" },
+        { nom: "Amel Joualli", photo: `${dossier}/communication-amel-joualli-hd.jpg`, linkedin: "https://www.linkedin.com/in/amel-joualli/" },
+        { nom: "Léa Pascal", photo: `${dossier}/communication-lea-pascal-hd.jpg`, linkedin: "https://www.linkedin.com/in/lea-pascal2003/" },
       ],
     },
     {
@@ -114,8 +116,9 @@ export const promotionActuelle: Promotion = {
           nom: "Alexandre Lacarrieu",
           fonction: "Responsable",
           photo: `${dossier}/evenementiel-alexandre-lacarrieu-hd.jpg`,
+          linkedin: "https://www.linkedin.com/in/alexandre-lacarrieu-7ba811369/",
         },
-        { nom: "Sarha Le Mestique", photo: `${dossier}/evenementiel-sarha-le-mestique-hd.jpg` },
+        { nom: "Sarha Le Mestique", photo: `${dossier}/evenementiel-sarha-le-mestique-hd.jpg`, linkedin: "https://www.linkedin.com/in/sarha-le-mestique/" },
       ],
     },
   ],

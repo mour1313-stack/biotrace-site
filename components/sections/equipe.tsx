@@ -59,6 +59,7 @@ function PanneauPole({ pole, numero }: { pole: Pole; numero: number }) {
             name: m.nom,
             role: m.fonction,
             image: m.photo,
+            linkedin: m.linkedin,
             alt: `Portrait de ${m.nom}${m.fonction ? `, ${m.fonction.toLowerCase()}` : ""}`,
           }))}
           // Même grille pour tous les pôles : les portraits gardent la même taille, quel que soit le nombre de membres.
