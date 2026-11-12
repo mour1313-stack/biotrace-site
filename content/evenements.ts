@@ -24,13 +24,13 @@ export type Evenement = {
 export const evenements: Evenement[] = [
   {
     id: "bio-innov-2027",
-    titre: "Bio-Innov 2027 — Biomatériaux biosourcés",
+    titre: "Bio-Innov 2027 — Biomatériaux innovants",
     categorie: "Congrès scientifique",
     statut: "a-venir",
     date: "1er et 2 février 2027",
     lieu: "Faculté des Sciences de Montpellier — Campus Triolet, bâtiment 36",
     description:
-      "21e édition du congrès scientifique organisé par les étudiants du Master IBION-Tec — l’association Biotrace aide à le financer. Thème : les biomatériaux biosourcés, de la conception à l’application.",
+      "21e édition du congrès scientifique organisé par les étudiants du Master IBION-Tec — l’association Biotrace aide à le financer. Thème : les biomatériaux innovants, de la conception à l’application.",
     image: {
       src: "/images/congres/bio-innov-2027-affiche.jpg",
       alt: "Affiche du congrès Bio-Innov 2027 sur les biomatériaux, les 1er et 2 février 2027 à la Faculté des Sciences de Montpellier.",

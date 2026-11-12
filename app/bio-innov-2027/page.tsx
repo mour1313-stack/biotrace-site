@@ -26,9 +26,9 @@ import { Reveal, RevealItem } from "@/components/site/motion-provider"
 import { Fiole, Molecule } from "@/components/site/doodles"
 
 export const metadata: Metadata = {
-  title: "Bio-Innov 2027 — Congrès sur les biomatériaux biosourcés",
+  title: "Bio-Innov 2027 — Congrès sur les biomatériaux innovants",
   description:
-    "Bio-Innov 2027, 21e édition du congrès scientifique organisé par les étudiants du Master IBION-Tec, avec le soutien financier de l’association Biotrace : les biomatériaux biosourcés, de la conception à l’application. 1er et 2 février 2027, Faculté des Sciences de Montpellier.",
+    "Bio-Innov 2027, 21e édition du congrès scientifique organisé par les étudiants du Master IBION-Tec, avec le soutien financier de l’association Biotrace : les biomatériaux innovants, de la conception à l’application. 1er et 2 février 2027, Faculté des Sciences de Montpellier.",
   openGraph: {
     images: [{ url: "/images/congres/bio-innov-2027-affiche.jpg", width: 1086, height: 1524, alt: "Affiche Bio-Innov 2027" }],
   },
@@ -153,17 +153,17 @@ export default function BioInnov2027() {
           <section aria-labelledby="theme" className="grid gap-10 md:grid-cols-[1.5fr_1fr]">
             <div>
               <TitreBloc numero="01" id="theme">
-                Le thème : <span className="surligne">biomatériaux biosourcés</span>
+                Le thème : <span className="surligne">biomatériaux innovants</span>
               </TitreBloc>
               <div className="mt-6 space-y-4 text-lg leading-relaxed text-ink-soft">
                 <p>
                   Les biomatériaux sont des matériaux conçus pour interagir avec le vivant : remplacer ou réparer un tissu,
-                  servir de support à la culture de cellules ou libérer un médicament au bon endroit. Ils sont{" "}
-                  <strong className="text-ink">biosourcés</strong> lorsqu’ils sont issus de la biomasse : plantes, algues,
-                  champignons, micro-organismes ou coproduits animaux.
+                  servir de support à la culture de cellules ou libérer un médicament au bon endroit. Les biomatériaux{" "}
+                  <strong className="text-ink">innovants</strong> ouvrent de nouvelles possibilités : matériaux issus du
+                  vivant, supports imprimés en 3D sur mesure, matériaux qui se résorbent une fois leur rôle rempli.
                 </p>
                 <p>
-                  Cellulose, chitosane, alginate, collagène… Ces ressources renouvelables mobilisent la biologie, la chimie, la
+                  Cellulose, chitosane, hydrogels, polymères résorbables… Ces matériaux mobilisent la biologie, la chimie, la
                   physique et l’ingénierie. Avec le thème
                   « <strong className="text-ink">de la conception à l’application</strong> », cette 21e édition propose de
                   suivre leur parcours, du laboratoire jusqu’à leurs usages.
