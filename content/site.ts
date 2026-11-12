@@ -12,7 +12,7 @@ export const site = {
    * moteurs de recherche de ne pas l'indexer (robots.txt + balise noindex), même s'il est déjà
    * en ligne pour un test. Le passer à true le jour de l'ouverture officielle.
    */
-  ouvertAuxMoteursDeRecherche: false as boolean,
+  ouvertAuxMoteursDeRecherche: true as boolean,
   statut: "Association loi 1901",
   creation: "novembre 2005",
   formation: "Master IBION-Tec — Ingénierie Biomoléculaire & Nanobiotechnologies",
