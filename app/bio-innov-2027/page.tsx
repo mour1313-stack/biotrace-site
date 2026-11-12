@@ -209,7 +209,7 @@ export default function BioInnov2027() {
                 </div>
                 <p className="mt-4 text-ink-soft">
                   Le congrès est organisé par les étudiants du Master IBION-Tec — Ingénierie Biomoléculaire &amp;
-                  Nanobiotechnologies. Les éditions précédentes portaient le nom de « Congrès Biotrace ».
+                  Nanobiotechnologies.
                 </p>
               </div>
               <div className="flex flex-col rounded-2xl bg-paper-deep p-5">
@@ -227,7 +227,7 @@ export default function BioInnov2027() {
                   </div>
                 </div>
                 <p className="mt-4 text-ink-soft">
-                  L’association étudiante du master aide à financer le congrès et relaie ses informations sur ce site et sur
+                  L’association Biotrace aide seulement à financer le congrès et relaie ses informations sur ce site et sur
                   ses réseaux.
                 </p>
               </div>

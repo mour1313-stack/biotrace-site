@@ -23,7 +23,7 @@ const affiches = [...archivesCongres]
     src: e.affiche,
     width: dimensions[e.annee]?.[0],
     height: dimensions[e.annee]?.[1],
-    alt: `Affiche du congrès Biotrace ${e.annee}${e.edition ? ` (${e.edition})` : ""} : ${e.theme}.`,
+    alt: `Affiche du congrès ${e.annee}${e.edition ? ` (${e.edition})` : ""} : ${e.theme}.`,
   }))
 
 /** Haut de la page L'association : le récit « Notre histoire », puis les affiches du congrès en zoom au défilement. */
@@ -48,13 +48,13 @@ export function NotreHistoire() {
               des amphithéâtres et créer des rencontres entre étudiants, chercheurs et professionnels.
             </p>
             <p>
-              Dès 2006, une tradition voit le jour : l’organisation d’un congrès scientifique annuel, imaginé et porté
-              par les étudiants. Au fil des années, les générations se succèdent, les thématiques évoluent et les
+              Dès 2006, une tradition voit le jour : un congrès scientifique annuel, organisé par les étudiants du
+              master, que BIOTRACE aide à financer. Au fil des années, les générations se succèdent, les thématiques évoluent et les
               découvertes se multiplient.
             </p>
             <p>
               Des biocapteurs aux nanotechnologies, des biomatériaux aux biotechnologies spatiales, chaque édition
-              témoigne de notre curiosité pour les innovations qui façonnent le monde de demain.
+              témoigne de la curiosité des étudiants pour les innovations qui façonnent le monde de demain.
             </p>
             <p>
               <strong className="text-ink">Plus de 20 ans après sa création</strong>, BIOTRACE continue de grandir,

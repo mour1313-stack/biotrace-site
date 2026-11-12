@@ -18,7 +18,7 @@ export type ResultatRecherche = {
 
 const descriptionsPages: Record<string, string> = {
   "/": site.accroche,
-  "/association": "Qui sommes-nous, nos missions et le Master IBION-Tec.",
+  "/association": "Qui sommes-nous, notre histoire et nos missions.",
   "/equipe": `${promotionActuelle.titre} — équipe ${promotionActuelle.annee}, le bureau et les quatre pôles.`,
   "/bio-innov-2027": `${congres.theme} — ${congres.dates}, ${congres.lieu.nom}.`,
   "/evenements": "Événements à venir, archives du congrès et galerie photo.",

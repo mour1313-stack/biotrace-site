@@ -34,7 +34,7 @@ export function Footer() {
       ]}
       credits={[
         { lead: "", label: site.accroche },
-        { lead: "Association étudiante du ", label: "Master IBION-Tec", tail: ` — ${site.universite}` },
+        { lead: "Association étudiante — ", label: site.universite },
         { lead: `${site.adresse.lieu}, ${site.adresse.rue}, `, label: site.adresse.ville },
         { lead: "Écrire à ", label: site.email, href: `mailto:${site.email}` },
         { lead: "Association créée en ", label: site.creation },

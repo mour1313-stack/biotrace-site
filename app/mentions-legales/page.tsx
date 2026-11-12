@@ -46,10 +46,10 @@ export default function MentionsLegales() {
             relative au contrat d’association.
           </p>
           <p>
-            Créée en novembre 2005, BIO TRACE est une association étudiante liée au Master IBION-Tec de la Faculté des
-            Sciences de l’Université de Montpellier. Elle a notamment pour objectif de promouvoir la formation, de
-            favoriser les échanges entre étudiants, chercheurs et professionnels et de contribuer à la vie scientifique
-            et associative.
+            Créée en novembre 2005, BIO TRACE est une association étudiante de la Faculté des Sciences de l’Université de
+            Montpellier. Elle a notamment pour objectif de favoriser les échanges entre étudiants, chercheurs et
+            professionnels, de contribuer à la vie scientifique et associative et d’aider à financer le congrès
+            Bio-Innov.
           </p>
           <p className="font-semibold">Identification de l’association :</p>
           <ul className="list-disc space-y-1.5 pl-5">

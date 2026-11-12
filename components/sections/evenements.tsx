@@ -239,8 +239,8 @@ export function Evenements() {
                   Passés : les <span className="surligne">archives du congrès</span>
                 </h3>
                 <p className="mt-3 max-w-2xl text-ink-soft">
-                  Organisé chaque année par les étudiants du Master IBION-Tec, le congrès s’appelait « Congrès Biotrace
-                  » avant de devenir Bio-Innov. Voici les éditions dont nous avons retrouvé les affiches.
+                  Le congrès est organisé chaque année par les étudiants du Master IBION-Tec ; Biotrace aide à le
+                  financer. Voici les éditions dont nous avons retrouvé les affiches.
                 </p>
               </div>
             </div>

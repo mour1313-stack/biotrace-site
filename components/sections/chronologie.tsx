@@ -17,7 +17,7 @@ const etapes: JourneyItem[] = [
   {
     id: "c2006",
     year: "2006",
-    content: "Premier congrès scientifique annuel, imaginé et porté par les étudiants : une tradition est née.",
+    content: "Premier congrès scientifique annuel des étudiants, que BIOTRACE aide à financer : une tradition est née.",
   },
   {
     id: "c2019",

@@ -17,10 +17,10 @@ export const site = {
   creation: "novembre 2005",
   formation: "Master IBION-Tec — Ingénierie Biomoléculaire & Nanobiotechnologies",
   universite: "Université de Montpellier",
-  signature: "Association étudiante du Master IBION-Tec — Université de Montpellier",
+  signature: "Association étudiante — Université de Montpellier",
   accroche: "Depuis 2005, la science nous rassemble.",
   presentation:
-    "Créée en novembre 2005, Biotrace est l’association étudiante du Master IBION-Tec de l’Université de Montpellier. Au croisement de l’ingénierie biomoléculaire et des nanobiotechnologies, elle rassemble les étudiants autour de projets scientifiques et associatifs, favorise les rencontres et valorise la formation auprès des étudiants, des chercheurs et des professionnels.",
+    "Créée en novembre 2005, Biotrace est une association étudiante de l’Université de Montpellier. Passionnée de biotechnologies, elle rassemble les étudiants autour de projets scientifiques et associatifs, favorise les rencontres et valorise la formation auprès des étudiants, des chercheurs et des professionnels.",
   adresse: {
     lieu: "Faculté des Sciences",
     rue: "Place Eugène Bataillon",
@@ -35,8 +35,8 @@ export const site = {
 
 export const missions = [
   {
-    titre: "Représenter la formation",
-    texte: "Représenter et promouvoir le Master IBION-Tec auprès des étudiants, des chercheurs et des professionnels.",
+    titre: "Soutenir le congrès",
+    texte: "Aider à financer Bio-Innov, le congrès scientifique organisé par les étudiants du Master IBION-Tec.",
     icone: "graduation",
   },
   {
